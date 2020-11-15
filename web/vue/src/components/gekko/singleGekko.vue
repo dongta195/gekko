@@ -307,6 +307,7 @@ export default {
         },
         candleSize
       };
+      console.log(this.data)
 
       // We timeout because of 2 reasons:
       // - In case we get a batch of candles we only fetch once

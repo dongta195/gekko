@@ -29,11 +29,11 @@ Checker.prototype.cantMonitor = function(conf) {
 
   var name = exchange.name;
 
-  if(!_.includes(exchange.currencies, conf.currency))
-    return 'Gekko only supports the currencies [ ' + exchange.currencies.join(', ') + ' ] at ' + name + ' (not ' + conf.currency + ')';
+  // if(!_.some(exchange.currencies, conf.currency))
+  //   return 'Gekko only supports the currencies [ ' + exchange.currencies.join(', ') + ' ] at ' + name + ' (not ' + conf.currency + ')';
 
-  if(!_.includes(exchange.assets, conf.asset))
-    return 'Gekko only supports the assets [ ' + exchange.assets.join(', ') + ' ]  at ' + name + ' (not ' + conf.asset + ')';
+  // if(!_.some(exchange.assets, conf.asset))
+  //   return 'Gekko only supports the assets [ ' + exchange.assets.join(', ') + ' ]  at ' + name + ' (not ' + conf.asset + ')';
 
   var pair = _.find(exchange.markets, function(p) {
     return p.pair[0] === conf.currency && p.pair[1] === conf.asset;

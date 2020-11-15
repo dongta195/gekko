@@ -14,6 +14,9 @@ const reduce = (state, event) => {
     latestUpdate: new Date()
   }
 
+  console.log('dkm')
+  console.log(state)
+
   if(trackAllEvents.includes(type)) {
     if(!state.events[type]) {
       state = {
